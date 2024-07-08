@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAI FASHIONS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About Us</a></li>
+                <li><a href="#products" onclick="showSection('products')">Products</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section id="home" class="content-section">
+            <h1 id="heading">Welcome to JAI FASHIONS</h1>
+            <img src="images/home.jpg" alt="Fashion Store">
+            <p>Welcome to our Store, where you can find the latest trends in clothing and accessories for all ages. Discover our collection and stay stylish!</p>
+        </section>
+        <section id="about" class="content-section">
+            <h1 id="heading">About Us</h1>
+            <img src="images/about.jpg" alt="About Us">
+            <p>We are a leading fashion retailer with over 20 years of experience in the industry. Our mission is to provide high-quality and trendy clothing that suits every individual’s style and preference. Our team is dedicated to offering the best shopping experience, both online and in-store.</p>
+        </section>
+        <section id="products" class="content-section">
+            <h1 id="heading">Our Products</h1>
+            <img src="i2.jpeg" alt="Our Products">
+            <p>Explore our wide range of products:</p>
+            <ul>
+                <li><strong>Men's Clothing:</strong> Suits, casual wear, sportswear, and accessories.</li>
+                <li><strong>Women's Clothing:</strong> Dresses, tops, skirts, and accessories.</li>
+                <li><strong>Kids' Clothing:</strong> Fashionable and comfortable clothing for kids of all ages.</li>
+                <li><strong>Accessories:</strong> Bags, belts, hats, scarves, and more.</li>
+            </ul>
+        </section>
+        <section id="contact" class="content-section">
+            <h1 id="heading">Contact Us</h1>
+            <img src="images/contact.jpg" alt="Contact Us">
+            <p>We'd love to hear from you! For any inquiries or support, please reach out to us through:</p>
+            <ul>
+                <li><strong>Email:</strong> support@jaifashions.com</li>
+                <li><strong>Phone:</strong> (123) 456-7890</li>
+                <li><strong>Address:</strong> 123 Time square, NY 12345</li>
+                <li><strong>Social Media:</strong> Follow us on Facebook, Twitter, and Instagram for the latest updates and promotions.</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.style.display = 'block';
+                    section.classList.add('full-page');
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        // Show the home section by default
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+    </script>
+</body>
+</html>
